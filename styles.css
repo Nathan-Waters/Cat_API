@@ -30,7 +30,8 @@ body {
 #bottom {
   border-right: solid;
   border-left: solid;
-  width: 864px;
+  border-bottom: solid;
+  width: 863px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

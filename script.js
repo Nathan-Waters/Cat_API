@@ -31,7 +31,6 @@ window.onload = function () {
   button.onclick = function (e) {
 
     let selectId = document.getElementById("breeds").value;
-    // console.log(json);
     selectedCat(selectId);
   };
 };
@@ -134,20 +133,17 @@ function selectedCat(cat) {
       
       for (let i = 0; i < catImg.length; i++) {
         let imgCreate = document.createElement("img");
-        
-
         let source = catImg[i].url;
+        
         imgCreate.src = source;
         imgCreate.alt = "a random cat picture";
         img.appendChild(imgCreate);
       }
-
     });
 }
 
 function breedsList(json) {
   for (let i = 0; i < json.length; i++) {
-    // console.log(json);
     cats(json[i].name, json[i].description, json[i].origin, json[i].life_span, json[i].child_friendly, json[i].dog_friendly, json[i].energy_level, json[i].social_needs, json[i].wikipedia_url, json[i].id);
     let selectId = document.getElementById("breeds");
     let catNames = document.createElement("option");
@@ -170,7 +166,6 @@ function cats(name, description, origin, lifeSpan, childFriendly, dogFriendly, e
     wiki: wiki,
     id: id
   }
-
   catObjArr.push(newCat);
 }
 
@@ -179,13 +174,3 @@ function catInfo(catObj) {
   name.innerHTML = catObj.name;
 }
 
-console.log(catObjArr);
-
-
-// function breedsList(json) {
-//   for (let i = 0; i < json.length; i++) {
-//     // console.log(json[i]);
-//     cats(json[i].name, json[i].description, json[i].origin, json[i].life_span, json[i].child_friendly, json[i].dog_friendly, json[i].energy_level, json[i].social_needs, json[i].wikipedia_url);
-//   }
-// }
-//, description, origin, lifeSpan, childFriendly, dogFriendly, energyLevel, socialNeeds, wiki, catId
